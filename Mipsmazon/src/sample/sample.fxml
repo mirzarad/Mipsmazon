@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="775.0" prefWidth="1610.0" style="-fx-background-color: #809fff;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXMLDocumentController">
+   <children>
+      <ListView fx:id="manufacturers_table" layoutX="477.0" layoutY="191.0" prefHeight="246.0" prefWidth="115.0" style="-fx-background-color: #ccffcc;" />
+      <ImageView fx:id="mipsmazon_logo" fitHeight="81.0" fitWidth="526.0" layoutX="325.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Mipzmazon-logo.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="confirm_order_button" accessibleHelp="Confirm your order" layoutX="1020.0" layoutY="652.0" mnemonicParsing="false" onAction="#confirmOrder" prefHeight="50.0" prefWidth="518.0" style="-fx-background-color: #44cc00;" text="CONFIRM ORDER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Bold" size="30.0" />
+         </font>
+      </Button>
+      <Label fx:id="popular_products_label" layoutX="226.0" layoutY="171.0" text="Popular Products" textFill="WHITE">
+         <font>
+            <Font name="HP Simplified" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="manufacturers_label" layoutX="492.0" layoutY="171.0" text="Manufacturers" textFill="WHITE">
+         <font>
+            <Font name="HP Simplified" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="cart_label" layoutX="518.0" layoutY="473.0" text="Cart" textFill="WHITE">
+         <font>
+            <Font name="HP Simplified" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="address_street_label" layoutX="1077.0" layoutY="241.0" text="Address Street:" textFill="WHITE">
+         <font>
+            <Font name="HP Simplified" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="address_zip_label" layoutX="1077.0" layoutY="260.0" text="Address Zip:" textFill="WHITE">
+         <font>
+            <Font name="HP Simplified" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="226.0" layoutY="553.0" />
+      <Label fx:id="customer_name_label" layoutX="1078.0" layoutY="222.0" text="Customer Name:" textFill="WHITE">
+         <font>
+            <Font name="HP Simplified" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="address_city_label" layoutX="1075.0" layoutY="279.0" text="Address City:" textFill="WHITE">
+         <font>
+            <Font name="HP Simplified" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="login_label" layoutX="273.0" layoutY="106.0" text="Login:" textFill="WHITE">
+         <font>
+            <Font name="Franklin Gothic Demi" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="customerID_textfield" layoutX="323.0" layoutY="102.0" />
+      <Label fx:id="customerID_label" layoutX="540.0" layoutY="105.0" text="Customer ID:" textFill="WHITE">
+         <font>
+            <Font name="Franklin Gothic Demi" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="customerID_current_label" layoutX="648.0" layoutY="105.0" prefHeight="18.0" prefWidth="115.0" />
+      <Button fx:id="add_to_cart_button_popular_products" layoutX="95.0" layoutY="437.0" mnemonicParsing="false" onAction="#addToCartPopularProducts" prefHeight="26.0" prefWidth="362.0" text="Add to Cart" textFill="#0a79a2">
+         <font>
+            <Font name="Franklin Gothic Demi" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="add_to_cart_button_products" layoutX="606.0" layoutY="437.0" mnemonicParsing="false" onAction="#addToCartProducts" prefHeight="26.0" prefWidth="362.0" text="Add to Cart" textFill="#0a79a2">
+         <font>
+            <Font name="Franklin Gothic Demi" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="remove_from_cart_button" layoutX="92.0" layoutY="695.0" mnemonicParsing="false" onAction="#removeFromCart" prefHeight="26.0" prefWidth="878.0" text="Remove from Cart" textFill="#0a79a2">
+         <font>
+            <Font name="HP Simplified Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="checkout_button" layoutX="93.0" layoutY="739.0" mnemonicParsing="false" onAction="#checkOut" prefHeight="26.0" prefWidth="878.0" text="CHECKOUT" textFill="#0a79a2">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="checkout_summary_label" layoutX="1067.0" layoutY="159.0" prefHeight="62.0" prefWidth="424.0" text="Checkout Summary" textFill="WHITE">
+         <font>
+            <Font name="HP Simplified Bold" size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="customer_name_db_label" layoutX="1259.0" layoutY="222.0" prefHeight="18.0" prefWidth="207.0" textAlignment="RIGHT" textFill="WHITE" />
+      <Label fx:id="address_street_db_label" layoutX="1259.0" layoutY="242.0" prefHeight="18.0" prefWidth="281.0" textFill="WHITE" />
+      <Label fx:id="address_zip_db_label" layoutX="1259.0" layoutY="261.0" prefHeight="18.0" prefWidth="282.0" textFill="WHITE" />
+      <Label fx:id="address_city_db_label" layoutX="1258.0" layoutY="280.0" prefHeight="18.0" prefWidth="282.0" textFill="WHITE" />
+      <Label fx:id="total_label" layoutX="1069.0" layoutY="298.0" text="TOTAL:" textFill="WHITE">
+         <font>
+            <Font name="HP Simplified" size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="dollarsign_label" layoutX="1221.0" layoutY="291.0" text="\$" textFill="WHITE">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="total_from_cart_label" layoutX="1248.0" layoutY="290.0" prefHeight="74.0" prefWidth="235.0" textFill="WHITE">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="order_confiorm_notice_label" layoutX="1093.0" layoutY="448.0" prefHeight="132.0" prefWidth="502.0" textFill="WHITE" />
+      <Button fx:id="go_back_button" layoutX="1019.0" layoutY="593.0" mnemonicParsing="false" onAction="#goBack" prefHeight="59.0" prefWidth="518.0" style="-fx-background-color: #ff6666;" text="GO BACK" textFill="WHITE">
+         <font>
+            <Font name="HP Simplified" size="30.0" />
+         </font>
+      </Button>
+      <Label fx:id="products_label" layoutX="756.0" layoutY="170.0" prefHeight="18.0" prefWidth="61.0" text="Products" textFill="WHITE">
+         <font>
+            <Font name="HP Simplified" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="login_error_label" layoutX="324.0" layoutY="133.0" prefHeight="18.0" prefWidth="413.0" />
+      <Button fx:id="hackIn" layoutX="480.0" layoutY="102.0" mnemonicParsing="false" onAction="#login" text="Login" />
+      <TableView fx:id="popular_product_tableview" layoutX="95.0" layoutY="190.0" prefHeight="246.0" prefWidth="362.0">
+         <columns>
+            <TableColumn fx:id="product_popularproducts" prefWidth="91.19998931884766" text="Product" />
+            <TableColumn fx:id="manufacturer_popularproducts" prefWidth="94.39999389648438" text="Manufacturer" />
+            <TableColumn fx:id="rating_popularproducts" prefWidth="69.5999755859375" text="Rating" />
+            <TableColumn fx:id="price_popularprodutcs" prefWidth="91.199951171875" text="Price" />
+         </columns>
+      </TableView>
+      <TableView fx:id="products_tableview" layoutX="606.0" layoutY="190.0" prefHeight="246.0" prefWidth="362.0">
+         <columns>
+            <TableColumn fx:id="product_products" prefWidth="91.19998931884766" text="Product" />
+            <TableColumn fx:id="manufacturer_products" prefWidth="94.39999389648438" text="Manufacturer" />
+            <TableColumn fx:id="rating_products" prefWidth="69.5999755859375" text="Rating" />
+            <TableColumn fx:id="price_products" prefWidth="91.199951171875" text="Price" />
+         </columns>
+      </TableView>
+      <TableView fx:id="cart_tableview" layoutX="92.0" layoutY="490.0" prefHeight="206.0" prefWidth="878.0">
+         <columns>
+            <TableColumn fx:id="product_cart" prefWidth="203.20000457763672" text="Product" />
+            <TableColumn fx:id="manufacturer_cart" prefWidth="205.60000610351562" text="Manufacturer" />
+            <TableColumn fx:id="rating_cart" prefWidth="214.40005493164062" text="Rating" />
+            <TableColumn fx:id="price_cart" prefWidth="237.0" text="Price" />
+         </columns>
+      </TableView>
+      <Button fx:id="update" layoutX="477.0" layoutY="438.0" mnemonicParsing="false" onAction="#updateProducts" prefHeight="25.0" prefWidth="115.0" text="Update" textFill="#51aa72">
+         <font>
+            <Font name="HP Simplified Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="view_all_manufacturers" layoutX="686.0" layoutY="138.0" mnemonicParsing="false" onAction="#viewAllManufacturers" prefHeight="26.0" prefWidth="201.0" text="View ALL Manufacturers" />
+      <Label fx:id="enter_card_info_label" layoutX="1078.0" layoutY="371.0" prefHeight="34.0" prefWidth="246.0" text="Enter Card Information:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="card_info_textfield" layoutX="1093.0" layoutY="405.0" prefHeight="26.0" prefWidth="282.0" />
+   </children>
+</AnchorPane>
